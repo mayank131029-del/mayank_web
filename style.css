@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cursor {
+    width: 14px;
+    height: 14px;
+
+    background-color: #8369f8;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    /* click block nahi karega */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.back {
+    text-align: start;
+    width: 85%;
+    margin: auto;
+}
+
+.back a {
+    text-decoration: none;
+    color: #0d1b2a;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.syne-font {
+    font-family: 'Syne', sans-serif;
+}
+
+nav,
+.mob-nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 20px;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+    padding: 10px 150px;
+    text-align: center;
+}
+
+.mob-nav {
+    display: none;
+    justify-content: center;
+    padding: 15px 5px;
+    background: #1e1e2f;
+
+}
+
+
+.logo h2 {
+    color: rgb(255, 255, 255);
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 35px;
+}
+
+.hero {
+    padding: 25px 0px;
+    background: #e0e1dd;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section {
+    align-items: center;
+    gap: 70px;
+    height: 70vh;
+    width: 85%;
+    padding: 50px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me {
+    gap: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 50%;
+}
+
+.profile-pic {
+    height: 450px;
+    border-radius: 210px;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 450px;
+    border: 2px solid #0d1b2a;
+}
+
+.profile-img {
+    background-image: url("images/profile_pic.png");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 210px;
+    height: 100%;
+}
+
+
+#name {
+    font-size: 26px;
+}
+
+#name2 {
+    font-weight: 700;
+    font-size: 65px;
+}
+
+#about-me {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cards-container {
+    gap: 20px;
+    width: 85%;
+    margin: 0px auto;
+    align-items: end;
+}
+
+.heading {
+    font-weight: 700;
+    color: #e0e1dd;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+.card {
+    backdrop-filter: blur(10px);
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card-box {
+    text-decoration: none;
+    width: 33%;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.hero-2 {
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+    ;
+    padding: 60px 0px;
+}
+
+.thumbnail {
+    border: 0px solid #e0e1dd;
+    box-sizing: border-box;
+    padding: 40px;
+    align-items: end;
+    border-radius: 45px;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    transition: 0.1s all ease;
+
+}
+
+.thumbnail:hover {
+    backdrop-filter: blur(10px);
+}
+
+#name,
+#name2,
+#about-me {
+    text-align: left;
+    color: #0d1b2a;
+}
+
+.card-heading {
+    transform: translateY(50px);
+    opacity: 0;
+    font-weight: 700;
+    font-size: 26px;
+    color: #e0e1dd;
+    transition: 0.2s all ease;
+}
+
+.thumbnail:hover .card-heading {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+nav ol a,
+.mob-nav ol a {
+    box-sizing: border-box;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Syne', sans-serif;
+    margin: 0px 10px;
+    border-bottom: 2px solid #0d1b2a00;
+    padding: 3px 10px;
+    transition: all 0.1s cubic-bezier(0, 0, 0, 0.99);
+}
+
+.mob-nav ol a {
+    font-size: 17px;
+    padding: 10px 0px;
+}
+
+
+nav ol a:hover {
+    border-bottom: 2px solid white;
+
+}
+
+nav ol {
+    box-sizing: border-box;
+}
+
+
+.container1 {
+    height: 50vh;
+    background-color: rgb(249, 249, 228);
+}
+
+footer {
+    flex-direction: column;
+    background: linear-gradient(45deg, #1e1e2f, #3a3a6a);
+}
+
+.footer1 {
+    padding: 25px 0px;
+    justify-content: space-around;
+}
+
+.socialicon {
+    align-items: center;
+}
+
+.socialicon a {
+    background-size: cover;
+    background-position: center center;
+    margin: 0px 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    transition: 0.2s ease;
+}
+
+.socialicon a:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.footerlogo {
+    background-image: url(images/logo.png);
+    width: 200px;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert();
+}
+
+.footer2 {
+    border-top: 1px solid white;
+    padding: 8px;
+    text-align: center;
+    color: white;
+}
+
+#instagram {
+    background-image: url(images/instagram.png);
+}
+
+#whatsapp {
+    background-image: url(images/whatsapp.png);
+}
+
+#behance {
+    background-image: url(images/behance.png);
+}
+
+#pinterest {
+    background-image: url(images/pinterest.png);
+}
+
+.footer-nav {
+    padding: 20px 0px;
+    margin: auto;
+}
+
+.footer-nav ol a {
+    box-sizing: border-box;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Syne', sans-serif;
+    padding: 3px 20px;
+    transition: all 0.1s cubic-bezier(0, 0, 0, 0.99);
+    border-bottom: 2px solid #0d1b2a00;
+    border-top: 2px solid #0d1b2a00;
+}
+
+
+.footer-nav ol a:hover {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.back2top {
+    right: 20px;
+    bottom: 50px;
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    background-color: #343277;
+    border-radius: 100%;
+    background-image: url(images/back2top.png);
+    background-position: center center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+}
+
+@media (max-width:880px) and (min-width:650px) {
+
+    .cards-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-box {
+        text-decoration: none;
+        width: 85%;
+    }
+
+    .hero-section {
+        height: auto;
+        gap: 20px;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .about-me {
+        order: 2;
+        width: 85%;
+        align-items: center;
+    }
+
+    .profile-pic {
+        order: 1;
+        width: 50%;
+    }
+
+    #name {
+        font-size: 18px;
+    }
+
+    #name2 {
+        font-size: 50px;
+    }
+
+    #about-me {
+        font-size: 15px;
+    }
+
+    .profile-img {
+        height: 100%;
+    }
+
+    #name,
+    #name2,
+    #about-me {
+        text-align: center;
+    }
+
+    nav ol {
+        display: none;
+    }
+    .mob-nav{
+        display: block;
+    }
+    
+    nav {
+        padding: 10px 0px;
+        justify-content: center;
+    }
+}
+
+@media (max-width:650px) {
+
+    .footer-nav ol {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ol {
+        display: none;
+    }
+
+    nav ol a {
+        width: 120px;
+    }
+
+    .hero-section {
+        height: auto;
+        gap: 20px;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .about-me {
+        order: 2;
+        width: 95%;
+        align-items: center;
+    }
+
+    .profile-pic {
+        height: 350px;
+        order: 1;
+        width: 90%;
+    }
+
+    #name {
+        font-size: 18px;
+    }
+
+    #name2 {
+        font-size: 45px;
+    }
+
+    #about-me {
+        font-size: 21px;
+    }
+
+    .profile-img {
+        height: 100%;
+    }
+
+    #name,
+    #name2,
+    #about-me {
+        text-align: center;
+    }
+
+    .cards-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-box {
+        text-decoration: none;
+        width: 85%;
+    }
+
+    .thumbnail {
+        height: 350px;
+    }
+
+    .heading {
+        font-size: 35px;
+    }
+
+    nav ol {
+        flex-direction: column;
+    }
+
+    .card-heading {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+
+    .footer1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .logo h2 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .footer-nav {
+        padding-top: 0px;
+    }
+
+    nav {
+        padding: 10px 0px;
+        justify-content: center;
+    }
+    .mob-nav{
+        display: block;
+    }
+
+}

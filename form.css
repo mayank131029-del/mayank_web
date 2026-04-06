@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: poppins;
+}
+
+main {
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+form {
+    background-color: aliceblue;
+    margin: 50px 0px;
+    width: 50%;
+    box-sizing: border-box;
+    box-shadow: 9px 9px 10px #cbdcff7a;
+    
+    border-radius: 15px;
+    padding: 70px;
+}
+
+form section {
+    width: 100%;
+    gap: 2px;
+    margin: 15px 0px;
+    flex-direction: column;
+}
+
+form section label {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+form section input {
+    border-radius: 5px;
+    padding: 3px 10px;
+    border: 0.5px solid #0d1b2a;
+}
+
+form h2 {
+    font-size: 28px;
+color: #000000;
+text-align: center;
+    margin-bottom: 25px;
+}
+
+.submit-btn {
+    border-radius: 8px;
+    background-color: #05478c;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 15px;
+    margin: 15px 0px;
+    font-weight: 500;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #062e59;
+    transform: scale(0.98);
+}
+
+.clear-btn {
+
+    transition: all 0.2s ease-in-out;
+    width: 70%;
+}
+
+.btns {
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-btn:hover {
+    transform: scale(0.96);
+}
+form p{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+form p a{
+    color: #05478c;
+    text-decoration: none;
+}
+.radio-box{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media (max-width:880px) and (min-width:650px) {
+
+    form{
+        padding: 40px 35px;
+        width: 90%;
+        margin: 20px 20px;
+    }
+    main{
+        padding: 30px 0px;
+    }
+    
+}
+
+
+
+@media (max-width:650px) {
+    form{
+        padding: 40px 35px;
+        width: 90%;
+        margin: 20px 20px;
+    }
+    main{
+        padding: 30px 0px;
+    }
+}

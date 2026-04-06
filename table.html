@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Table</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #333;
+            color: #fff;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        .active {
+            color: green;
+            font-weight: bold;
+        }
+
+        .inactive {
+            color: red;
+            font-weight: bold;
+
+        }
+
+        body h2 {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 35px;
+            color: #0d1b2a;
+        }
+
+        main {
+            margin: 50px 30px;
+            box-sizing: border-box;
+        }
+
+        .back {
+            width: 100%;
+        }
+
+        .even {
+            background-color: #f7f6ff;
+        }
+    </style>
+</head>
+<header>
+
+    <nav>
+			<div class="logo"><h2>Mayank.</h2></div>
+			<ol class="nav-bar">
+				<a href="index.html"> Home </a>
+				<a href="#hero-2"> My Work </a>
+				<a href="index.html"> About Me </a>
+				<a href="index.html"> Contact </a>
+
+			</ol>
+
+		</nav>
+</header>
+
+<body>
+
+    <main>
+        <div class="back"><a href="web_content.html"> &larrhk; back</a></div>
+        <h2>Student Performance Table</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Score</th>
+                    <th>Grade</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="even">
+                    <td>101</td>
+                    <td>Rahul Sharma</td>
+                    <td>Web Design</td>
+                    <td>85</td>
+                    <td>A</td>
+                    <td class="active">Active</td>
+                </tr>
+
+                <tr class="odd">
+                    <td>102</td>
+                    <td>Priya Verma</td>
+                    <td>Graphic Design</td>
+                    <td>78</td>
+                    <td>B+</td>
+                    <td class="active">Active</td>
+                </tr>
+
+                <tr class="even">
+                    <td>103</td>
+                    <td>Aman Gupta</td>
+                    <td>Animation</td>
+                    <td>92</td>
+                    <td>A+</td>
+                    <td class="active">Active</td>
+                </tr>
+
+                <tr class="odd">
+                    <td>104</td>
+                    <td>Anil Kapoor</td>
+                    <td>UI/UX</td>
+                    <td>69</td>
+                    <td>B</td>
+                    <td class="inactive">Inactive</td>
+                </tr>
+
+                <tr class="even">
+                    <td>105</td>
+                    <td>Vikram Singh</td>
+                    <td>Frontend Dev</td>
+                    <td>88</td>
+                    <td>A</td>
+                    <td class="active">Active</td>
+                </tr>
+
+                <tr class="odd">
+                    <td>106</td>
+                    <td>Anjali Mehta</td>
+                    <td>Motion Graphics</td>
+                    <td>74</td>
+                    <td>B+</td>
+                    <td class="inactive">Inactive</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+<footer class="flex">
+	<div class="footer1 flex">
+		<div class="logo"><h2>mayank.</h2></div>
+		<div class="socialicon flex
+	">
+			<a id="behance" href=""></a>
+			<a id="instagram" href=""></a>
+			<a id="whatsapp" href=""></a>
+			<a id="pinterest" href=""></a>
+		</div>
+
+	</div>
+	<div class="footer-nav">
+		<ol class="nav-bar">
+				<a href="index.html"> Home </a>
+				<a href="#hero-2"> My Work </a>
+				<a href="index.html"> About Me </a>
+				<a href="index.html"> Contact </a>
+
+			</ol>
+	</div>
+	<div class="footer2">All Right Reserved 2026</div>
+</footer>
+</html>

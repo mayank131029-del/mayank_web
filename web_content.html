@@ -1,0 +1,219 @@
+<! doctype html>
+        <html>
+
+
+        <head>
+                <link rel="stylesheet" href="style.css">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Web Content</title>
+                <link rel="stylesheet" href="style.css">
+                <style>
+                        * {
+                                margin: 0px;
+                                padding: 0px;
+                                font-family: poppins;
+                        }
+
+
+
+                        html {
+                                background: #e0e1dd;
+                        }
+
+                        .syne-font {
+                                color: #0d1b2a;
+                                font-family: 'Syne', sans-serif;
+                        }
+
+                        main a {
+                                width: 30%;
+                                text-decoration: none;
+                        }
+
+                        main {
+                                grid-template-columns: repeat(3, 1fr);
+                                padding: 50px 30px;
+                                box-sizing: border-box;
+                                flex-wrap: wrap;
+                                gap: 25px;
+                                width: 100vw;
+                                margin: 0px auto;
+                        }
+
+                        .heading {
+                                margin-top: 30px;
+                                color: #181e2e;
+                                font-size: 40px;
+                                text-align: center;
+                                text-shadow: 0px 5px 10px #dbdbdb;
+                        }
+
+
+                        #photo-gallery {
+                                background-image: url(images/photogallery.png);
+                        }
+
+                        #forms {
+                                background-image: url(images/foms.png);
+                        }
+
+                        #table {
+                                background-image: url(images/tables.png);
+                        }
+
+                        #list {
+                                background-image: url(images/list.png);
+                        }
+
+
+                        .web-content-card {
+                                width: 100%;
+                                background-size: cover;
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                aspect-ratio: 16/11;
+                                border-radius: 30px 15px 30px 15px;
+                                transition: all 0.2s ease-in-out;
+                        }
+
+                        .web-content-card:hover {
+                                transform: translateY(-10px) scale(1.02);
+                        }
+
+
+                        .web-content-card h2 {
+                                margin-bottom: 10px;
+                                color: white;
+
+                        }
+
+                        .overlay {
+                                align-items: end;
+                                border-radius: 30px 15px 30px 15px;
+
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(to top, #00000085, #feb47b00);
+                        }
+
+                        .back {
+                                width: 85%;
+                                margin: auto;
+                        }
+
+                        @media (max-width:880px) and (min-width:650px) {
+
+                                main a {
+                                        width: 45%;
+                                        text-decoration: none;
+                                }
+                        }
+
+                        @media (max-width:650px) {
+                                main a {
+                                        width: 90%;
+                                        text-decoration: none;
+                                }
+                        }
+                </style>
+
+        </head>
+        <header id="top">
+
+		<nav>
+			<a href="index.html">
+				<div class="logo">
+					<h2>Mayank.</h2>
+				</div>
+			</a>
+			<ol class="nav-bar">
+				<a href="index.html"> Home </a>
+				<a href="#hero-2"> My Work </a>
+				<a href="index.html"> About Me </a>
+				<a href="index.html"> Contact </a>
+
+			</ol>
+
+		</nav>
+		<div class="mob-nav">
+			<ol class="nav-bar">
+				<a href="index.html"> Home </a>
+				<a href="#hero-2"> My Work </a>
+				<a href="index.html"> About Me </a>
+				<a href="index.html"> Contact </a>
+
+			</ol>
+		</div>
+
+	</header>
+
+        <body>
+                <h1 class="heading">Practice Work</h1>
+                <div class="back"><a href="index.html"> &larrhk; back</a></div>
+                <main class="flex">
+                        <a href="photogallery.html">
+                                <div class="web-content-card" id="photo-gallery">
+                                        <div class="overlay flex">
+
+                                                <h2>PHOTOGALLERY</h2>
+                                        </div>
+                                </div>
+                        </a>
+                        <a href="regestration form.html">
+                                <div class="web-content-card" id="forms">
+                                        <div class="overlay flex">
+
+                                                <h2>FORMS</h2>
+                                        </div>
+                                </div>
+                        </a>
+                        <a href="table.html">
+                                <div class="web-content-card" id="table">
+                                        <div class="overlay flex">
+
+                                                <h2>TABLES</h2>
+                                        </div>
+                                </div>
+                        </a>
+                        <a href="list.html">
+                                <div class="web-content-card" id="list">
+                                        <div class="overlay flex">
+
+                                                <h2>LISTS</h2>
+                                        </div>
+                                </div>
+                        </a>
+                </main>
+
+        </body>
+
+
+        <footer class="flex">
+                <div class="footer1 flex">
+                        <a href="index.html">
+                                <div class="logo">
+                                        <h2>mayank.</h2>
+                                </div>
+                        </a>
+                        <div class="socialicon flex
+	">
+                                <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
+                                <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
+                                <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
+                                <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
+                        </div>
+
+                </div>
+                <div class="footer-nav">
+                        <ol class="nav-bar">
+                                <a href="index.html"> Home </a>
+                                <a href="#hero-2"> My Work </a>
+                                <a href="index.html"> About Me </a>
+                                <a href="index.html"> Contact </a>
+
+                        </ol>
+                </div>
+                <div class="footer2">All Right Reserved 2026</div>
+        </footer>
+
+        </html>
