@@ -9,12 +9,12 @@
 const nav = document.querySelector(".mob-nav");
 const button = document.querySelector(".hamburger");
 
-button.addEventListener("click", () => {
+function toggleMenu() {
   nav.classList.toggle("active");
-  button.classList.toggle("close")
-});
+  button.classList.toggle("close");
+}
 
-
-
+button.addEventListener("click", toggleMenu);
+button.addEventListener("touchstart", toggleMenu);
 
 
