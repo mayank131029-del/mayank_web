@@ -138,7 +138,7 @@ nav,
 
 .profile-pic {
     height: 450px;
-    border-radius: 210px;
+    border-radius: 200px;
     box-sizing: border-box;
     padding: 15px;
     width: 450px;
@@ -146,8 +146,9 @@ nav,
 }
 
 .profile-img {
-    background-image: url("images/profile_pic.png");
+    background-image: url("images/profile-pic.png");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
     border-radius: 210px;
     height: 100%;
@@ -383,7 +384,7 @@ footer {
     background-repeat: no-repeat;
 }
 
-@media (max-width:880px) and (min-width:650px) {
+@media (max-width:880px) and (min-width:615px) {
 
     .cards-container {
         width: 100%;
@@ -457,7 +458,7 @@ footer {
     }
 }
 
-@media (max-width:650px) {
+@media (max-width:615px) {
 
     .footer-nav ol {
         display: flex;
