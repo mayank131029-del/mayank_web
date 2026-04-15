@@ -14,7 +14,6 @@ function toggleMenu() {
   button.classList.toggle("close");
 }
 
-button.addEventListener("click", toggleMenu);
-button.addEventListener("touchstart", toggleMenu);
+button.addEventListener("click", toggleMen
 
 
