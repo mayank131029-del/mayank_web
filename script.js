@@ -14,6 +14,6 @@ function toggleMenu() {
   button.classList.toggle("close");
 }
 
-button.addEventListener("click", toggleMen
+button.addEventListener("click", toggleMenu)
 
 
