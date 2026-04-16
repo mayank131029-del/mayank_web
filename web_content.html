@@ -28,14 +28,17 @@
                         main a {
                                 width: 30%;
                                 text-decoration: none;
+                                transition: all 0.2s ease-in-out;
                         }
+
+
 
                         main {
                                 grid-template-columns: repeat(3, 1fr);
                                 padding: 50px 30px;
                                 box-sizing: border-box;
                                 flex-wrap: wrap;
-                                gap: 25px;
+                                gap: 30px;
                                 width: 100vw;
                                 margin: 0px auto;
                         }
@@ -67,6 +70,9 @@
                         #banner {
                                 background-image: url(images/banner.png);
                         }
+                        #iframes {
+                                background-image: url(images/iframes.png);
+                        }
 
 
                         .web-content-card {
@@ -75,7 +81,7 @@
                                 background-position: center center;
                                 background-repeat: no-repeat;
                                 aspect-ratio: 16/11;
-                                border-radius: 30px 15px 30px 15px;
+                                border-radius: 22px 15px 22px 15px;
                                 transition: all 0.2s ease-in-out;
                         }
 
@@ -198,6 +204,14 @@
                                         <div class="overlay flex">
 
                                                 <h2>BANNER</h2>
+                                        </div>
+                                </div>
+                        </a>
+                        <a href="iframes.html">
+                                <div class="web-content-card" id="iframes">
+                                        <div class="overlay flex">
+
+                                                <h2>IFRAMES</h2>
                                         </div>
                                 </div>
                         </a>

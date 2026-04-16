@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+
+
+
+h1 {
+  text-align: center;
+  background: black;
+  color: #fff;
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  height: 80vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #222;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #444;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #ff3e7f;
+}
+
+.content {
+  flex: 1;
+  padding: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 880px) and (min-width: 650px) {
+
+  .sidebar {
+    width: 180px;
+    padding: 15px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .content {
+    padding: 8px;
+  }
+
+  iframe {
+    height: 70vh;
+  }
+}
+
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 22px;
+    padding: 12px;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .sidebar a {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  iframe {
+    height: 60vh;
+  }
+}
+</style>
+
+</head>
+<header id="top">
+
+    <nav>
+        <a href="index.html">
+            <div class="logo">
+                <h2>Mayank.</h2>
+            </div>
+        </a>
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="index.html"> About Me </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+        <div class="hamburger"></div>
+
+    </nav>
+    <div class="mob-nav">
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="#hero-2"> My Work </a>
+            <a href="index.html"> About Me </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+
+</header>
+
+
+
+
+<body>
+
+<h1>Iframe Practice (Maps + YouTube)</h1>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <a href="https://www.youtube.com/embed/1pnKd6YHmV4?si=vXLQ8hEGAwxrI0p0" target="frame">Movie Trailer</a>
+      <a href="https://www.youtube.com/embed/8BUsezOm6DE?si=Vr81Gag862rLgZI-" target="frame">Comedy Video</a>
+      <a href="https://www.google.com/maps?q=Delhi&output=embed" target="frame">Google Map (Delhi)</a>
+      <a href="https://www.google.com/maps?q=India Gate&output=embed" target="frame">India Gate Map</a>
+    </div>
+
+
+    <div class="content">
+      <iframe 
+        name="frame"
+        src="https://www.youtube.com/embed/1pnKd6YHmV4?si=vXLQ8hEGAwxrI0p0"
+        >
+      </iframe>
+    </div>
+
+  </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+
+
+<footer class="flex">
+    <div class="footer1 flex">
+        <a href="index.html">
+            <div class="logo">
+                <h2>mayank.</h2>
+            </div>
+        </a>
+        <div class="socialicon flex
+	">
+            <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
+            <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
+            <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
+            <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
+        </div>
+
+    </div>
+    <div class="footer-nav">
+        <ol class="nav-bar">
+            <a href="#top"> Home </a>
+            <a href="#hero-2"> My Work </a>
+            <a href="index.html"> About Me </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+    <div class="footer2">All Right Reserved 2026</div>
+</footer>
+
+</html>
