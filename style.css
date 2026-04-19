@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 
 * {
     box-sizing: border-box;
@@ -60,6 +63,7 @@ body {
 }
 
 nav {
+    box-shadow: 10px 0px 20px #1d1d1d9f;
     z-index: 999;
     position: fixed;
     top: 0px;
@@ -156,16 +160,16 @@ nav,
 
 
 #name {
-    font-size: 26px;
+    font-size: 30px;
 }
 
 #name span {
-    color: #282263;
+    color: #0979b9;
 }
 
 #name2 {
     font-weight: 700;
-    font-size: 65px;
+    font-size: 55px;
 }
 
 #about-me {
@@ -173,11 +177,32 @@ nav,
     font-weight: 500;
 }
 
+.cards-container-box {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
 .cards-container {
+    justify-content: center;
+    margin: 0px auto;
     gap: 20px;
     width: 85%;
-    margin: 0px auto;
     align-items: end;
+}
+
+.line {
+    width: 10px;
+    height: 400px;
+}
+
+.fill-line {
+    border-radius: 40%;
+    top: 500px;
+    width: 100%;
+    height: 10%;
+    background: white;
+    position: sticky;
 }
 
 .heading {
@@ -192,7 +217,9 @@ nav,
     backdrop-filter: blur(10px);
     width: 100%;
     text-align: center;
-    transition: all 0.3s ease;
+    border-radius: 45px;
+    transition: all 0.2s ease;
+    border: 3px solid rgba(255, 0, 234, 0);
 }
 
 .card-box {
@@ -200,7 +227,7 @@ nav,
     width: 33%;
 }
 
-.card:hover {
+.card-box .card:hover {
     transform: translateY(-10px) scale(1.02);
 }
 
@@ -211,11 +238,12 @@ nav,
 }
 
 .thumbnail {
+    justify-content: start;
+    border-radius: 30px;
     border: 0px solid #e0e1dd;
     box-sizing: border-box;
-    padding: 40px;
+    padding: 32px;
     align-items: end;
-    border-radius: 45px;
     height: 400px;
     background-size: cover;
     background-position: center center;
@@ -237,9 +265,12 @@ nav,
 .card-heading {
     transform: translateY(50px);
     opacity: 0;
+    border-radius: 5px;
+    background-color: #e0e1dd ;
+    padding: 5px 15px;
     font-weight: 700;
-    font-size: 26px;
-    color: #e0e1dd;
+    font-size: 19px;
+    color: #043a58;
     transition: 0.2s all ease;
 }
 
@@ -497,7 +528,7 @@ footer {
 
     #name {
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: 25px;
     }
 
     #name2 {
@@ -544,7 +575,7 @@ footer {
     }
 
     .card-heading {
-        font-size: 25px;
+        font-size: 18px;
         transform: translateY(20px);
         opacity: 1;
     }
@@ -595,7 +626,8 @@ footer {
     .active {
         margin-top: 70px;
     }
-    .close{
+
+    .close {
         background-size: 120%;
         background-image: url(images/close.png);
     }
