@@ -18,7 +18,7 @@ h1{
 }
 
 .container{
-  justify-content: start;
+  justify-content: center;
   padding: 100px 0px;
   width: 90%;
   margin: auto;
@@ -29,7 +29,7 @@ h1{
 
 .card{
     text-align: start;
-  width: 30%;
+  max-width: 350px;
   background: rgba(255,255,255,0.6);
   border-radius:20px;
   padding:20px;
@@ -99,19 +99,38 @@ li{
 </style>
 </head>
 
-<header>
-    	<nav>
-			<a href="index.html"><div class="logo"><h2>Mayank.</h2></div></a>
-			<ol class="nav-bar">
-				<a href="index.html"> Home </a>
-				<a href="#hero-2"> My Work </a>
-				<a href="index.html"> About Me </a>
-				<a href="index.html"> Contact </a>
+<a href="#top">
+                <div class="back2top"></div>
+        </a>
+        <header id="top">
 
-			</ol>
+                <nav>
+                        <a href="index.html">
+                                <div class="logo">
+                                        <h2>Mayank.</h2>
+                                </div>
+                        </a>
+                        <ol class="nav-bar">
+                                <a href="index.html"> Home </a>
+                                <a href="#hero-2"> My Work </a>
+                                <a href="index.html"> About Me </a>
+                                <a href="index.html"> Contact </a>
 
-		</nav>
-</header>
+                        </ol>
+                        <div class="hamburger"></div>
+
+                </nav>
+                <div class="mob-nav">
+                        <ol class="nav-bar">
+                                <a href="index.html"> Home </a>
+                                <a href="#hero-2"> My Work </a>
+                                <a href="index.html"> About Me </a>
+                                <a href="index.html"> Contact </a>
+
+                        </ol>
+                </div>
+
+        </header>
 
 <body>
 
@@ -192,6 +211,9 @@ li{
 </div>
 
 </body>
+<a href="#top">
+		<div class="back2top"></div>
+	</a>
 <footer class="flex">
 	<div class="footer1 flex">
 		<a href="index.html"><div class="logo"><h2>mayank.</h2></div></a>
@@ -207,8 +229,8 @@ li{
 	<div class="footer-nav">
 		<ol class="nav-bar">
 				<a href="index.html"> Home </a>
-				<a href="#hero-2"> My Work </a>
-				<a href="index.html"> About Me </a>
+				<a href="web_content.html"> My Work </a>
+				<a href="projects.html"> Projects </a>
 				<a href="index.html"> Contact </a>
 
 			</ol>

@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 const nav = document.querySelector(".mob-nav");
 const button = document.querySelector(".hamburger");
 
@@ -14,6 +8,8 @@ function toggleMenu() {
   button.classList.toggle("close");
 }
 
-button.addEventListener("click", toggleMenu)
+button.addEventListener("click", toggleMenu);
 
 
+let viewportWidth = window.innerWidth;
+console.log(viewportWidth);
