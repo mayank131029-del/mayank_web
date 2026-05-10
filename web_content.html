@@ -35,16 +35,15 @@
 
                         main {
                                 grid-template-columns: repeat(3, 1fr);
-                                padding: 50px 30px;
+                                padding: 35px 30px;
                                 box-sizing: border-box;
                                 flex-wrap: wrap;
-                                gap: 30px;
-                                width: 100vw;
+                                gap: 35px;
+                                width: 80vw;
                                 margin: 0px auto;
                         }
 
                         .heading {
-                                margin-top: 30px;
                                 color: #181e2e;
                                 font-size: 40px;
                                 text-align: center;
@@ -95,7 +94,7 @@
                         }
 
                         .web-content-card:hover {
-                                transform: translateY(-10px) scale(1.02);
+                                transform: translateY(-5px) scale(1.01);
                         }
 
 
@@ -116,7 +115,13 @@
 
                         .back {
                                 width: 85%;
-                                margin: auto;
+                                margin: 5px auto;
+                        }
+                        
+                        #html{
+                                border-radius: 30px;
+                                background-color: brown;
+                                padding: 12px 30px;
                         }
 
                         @media (max-width:880px) and (min-width:650px) {
@@ -173,8 +178,15 @@
                 <a href="#top">
                         <div class="back2top"></div>
                 </a>
-                <h1 class="heading">Practice Work</h1>
                 <div class="back"><a href="index.html"> &larrhk; back</a></div>
+                <div class="menu flex">
+                        <ul>
+                                <li id="html"><a href="">HTML + CSS</a></li>
+                                <li id="js"><a href="javascript_content.html">JavaScript</a></li>
+                                <li id="js"><a href="projects.html">Projects</a></li>
+                        </ul>
+                </div>
+                <h1 class="heading">Practice Work</h1>
                 <main class="flex">
                         <a href="photogallery.html">
                                 <div class="web-content-card" id="photo-gallery">

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            background-color: #e0e1dd;
+        }
+
+        .js-demo {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .demo-card {
+            width: 100%;
+            max-width: 550px;
+            background: rgb(233, 225, 255);
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .demo-card h1 {
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .demo-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .btn-group {
+            margin: 25px 0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            border: none;
+            padding: 12px 22px;
+            background: #ff3e7f;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e62f6d;
+            transform: translateY(-3px);
+        }
+
+        .output-box {
+            background: #f4f4f4;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .output-box h3 {
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        #output {
+            color: #333;
+        }
+        .back{
+            padding: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<a href="#top">
+    <div class="back2top"></div>
+</a>
+<header id="top">
+
+    <nav>
+        <a href="index.html">
+            <div class="logo">
+                <h2>Mayank.</h2>
+            </div>
+        </a>
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="about-me.html"> About Me </a>
+            <a href="contact.html"> Contact </a>
+
+        </ol>
+        <div class="hamburger"></div>
+
+    </nav>
+    <div class="mob-nav">
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="projects.html">Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+
+</header>
+
+
+<body>
+     <div class="back"><a href="javascript_content.html"> &larrhk; back</a></div>
+    <section class="js-demo">
+        <div class="demo-card">
+            <h1>JavaScript Alert & Prompt Demo</h1>
+            <p>
+                Click the buttons below to understand how <b>alert()</b> and
+                <b>prompt()</b> work in JavaScript.
+            </p>
+
+            <div class="btn-group">
+                <button id="alert">Show Alert</button>
+                <button id="prompt">Use Prompt</button>
+            </div>
+
+            <div class="output-box">
+                <h3>Output:</h3>
+                <p class="output">Your result will be display here.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        document.querySelector("#alert").onclick = () => {
+            alert("This is JavaScript alert box!")
+        }
+        document.querySelector("#prompt").onclick = () => {
+            var name = prompt("What's your Name?")
+            var p = document.querySelector(".output")
+            p.innerText = "Hello "+ name
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+
+
+<footer class="flex">
+    <div class="footer1 flex">
+        <a href="index.html">
+            <div class="logo">
+                <h2>mayank.</h2>
+            </div>
+        </a>
+        <div class="socialicon flex
+	">
+            <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
+            <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
+            <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
+            <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
+        </div>
+
+    </div>
+    <div class="footer-nav">
+        <ol class="nav-bar">
+            <a href="#top"> Home </a>
+            <a href="#hero-2"> My Work </a>
+            <a href="projects.html"> Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+    <div class="footer2">All Right Reserved 2026</div>
+
+</footer>
+
+</html>

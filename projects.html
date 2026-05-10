@@ -16,12 +16,14 @@
         }
 
         .projects {
+            flex-wrap: wrap;
             flex-direction: row;
             gap: 20px;
             align-items: flex-start;
             width: 85%;
         }
-        .projects a{
+
+        .projects a {
             padding-top: 150px;
             color: black;
             font-size: 17px;
@@ -31,10 +33,24 @@
             height: 200px;
             border-radius: 20px;
             background-color: rgb(225, 212, 255);
-            width: 33%;
+            width: 30%;
         }
-        .projects a:hover{
+
+        .projects a:hover {
             transform: scale(1.04);
+        }
+
+
+        #projects {
+            border-radius: 30px;
+            background-color: brown;
+            padding: 12px 30px;
+        }
+
+        @media (max-width:650px) {
+            .projects a {
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -50,7 +66,7 @@
             </div>
         </a>
         <ol class="nav-bar">
-            <a href="index.html" > Home </a>
+            <a href="index.html"> Home </a>
             <a href="index.html"> My Work </a>
             <a href="projects.html" style="border-bottom: 2px solid white;"> Projects </a>
             <a href="contact.html"> Contact </a>
@@ -75,13 +91,21 @@
 
 <body>
     <section class="flex">
+        <div class="menu flex">
+            <ul>
+                <li id="html"><a href="web_content.html">HTML + CSS</a></li>
+                <li id="js"><a href="javascript_content.html">JavaScript</a></li>
+                <li id="projects"><a href="projects.html">Projects</a></li>
+            </ul>
+        </div>
         <h1>Projects</h1>
         <section class="projects flex">
             <a href="https://mayank131029-del.github.io/plant-care/" target="_blank">Plant
                 Care</a>
             <a href="https://mayank131029-del.github.io/animation/" target="_blank">Types of Animation</a>
             <a href="https://69f4af2f5974740d25c091ea--jio-clone-home.netlify.app/" target="_blank">Jio Clone | Home</a>
-            </section>
+            <a href="https://mayank131029-del.github.io/aotm-may/" target="_blank">Arena Animation Site</a>
+        </section>
     </section>
 
 

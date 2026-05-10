@@ -266,7 +266,7 @@ nav,
     transform: translateY(50px);
     opacity: 0;
     border-radius: 5px;
-    background-color: #e0e1dd ;
+    background-color: #e0e1dd;
     padding: 5px 15px;
     font-weight: 700;
     font-size: 19px;
@@ -401,6 +401,7 @@ footer {
 }
 
 .back2top {
+    opacity: 0;
     z-index: 9999;
     right: 20px;
     bottom: 50px;
@@ -413,6 +414,29 @@ footer {
     background-position: center center;
     background-size: 65%;
     background-repeat: no-repeat;
+}
+.show{
+    opacity: 1;
+}
+
+.menu {
+    border-radius: 30px;
+    width: 75%;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline;
+    margin: 20px;
+}
+
+.menu ul a {
+    font-weight: 500;
+    color: #e0e1dd;
+
 }
 
 @media (max-width:880px) and (min-width:615px) {
@@ -490,6 +514,20 @@ footer {
 }
 
 @media (max-width:615px) {
+
+    .menu ul {
+        justify-content: center;
+        align-items: center;
+    width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu ul li{
+      margin: 5px;
+      text-align: center;
+      width: 90%;
+    }
+
 
     .footer-nav ol {
         display: flex;
