@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e0e1dd;
+        }
+
+        .popup_box {
+            top: 0px;
+            position: fixed;
+            z-index: 99999;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background-color: #636363bd;
+        }
+
+        .popup {
+            flex-direction: column;
+            background: rgb(233, 225, 255);
+            width: 40%;
+            gap: 25px;
+            padding: 35px 50px 50px 50px;
+            border-radius: 18px;
+        }
+
+
+        .popup_content {
+            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .popup p {
+            cursor: pointer;
+            font-size: 19px;
+            text-align: right;
+        }
+
+        .popup_content h5 {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .popup_content h1 {
+            text-align: center;
+            font-size: 55px;
+            font-weight: 700;
+            color: #26263f;
+        }
+
+        .buttons button {
+
+            border: none;
+            padding: 12px 22px;
+            background: #ff3e7f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .buttons button:hover {
+            background: #e62f6d;
+            transform: translateY(-3px);
+        }
+
+        .buttons {
+            gap: 10px;
+        }
+
+        .hide_popup {
+            display: none;
+        }
+        .bg img{
+            width: 100%;
+        }
+        @media (max-width:650px) {
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .popup {
+                width: 90%;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<a href="#top">
+    <div class="back2top"></div>
+</a>
+<header id="top">
+
+    <nav>
+        <a href="index.html">
+            <div class="logo">
+                <h2>Mayank.</h2>
+            </div>
+        </a>
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="about-me.html"> About Me </a>
+            <a href="contact.html"> Contact </a>
+
+        </ol>
+        <div class="hamburger"></div>
+
+    </nav>
+    <div class="mob-nav">
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="projects.html">Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+
+</header>
+
+
+<body>
+    <div class="back"><a href="javascript_content.html"> &larrhk; back</a></div>
+    <div class="bg">
+        <img src="images/banner1.jpg" alt="">
+        <img src="images/banner2.jpg" alt="">
+        <img src="images/banner3.jpg" alt="">
+    </div>
+    <div class="popup_box flex unclickable">
+        <div class="popup flex">
+            <p class="close_popup">x</p>
+            <div class="popup_content flex">
+                <h5>Check Out now & Receive</h5>
+                <h1>10% OFF</h1>
+                <h5>your first Order</h5>
+
+            </div>
+            <div class="buttons flex">
+                <button>Your Email Address</button>
+                <button>Get my 10% off</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var popup_box = document.querySelector(".popup_box")
+        var closex = document.querySelector(".close_popup")
+        closex.addEventListener("click", function () {
+            popup_box.className = "hide_popup";
+        })
+
+    </script>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+<footer class="flex">
+    <div class="footer1 flex">
+        <a href="index.html">
+            <div class="logo">
+                <h2>mayank.</h2>
+            </div>
+        </a>
+        <div class="socialicon flex
+	">
+            <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
+            <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
+            <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
+            <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
+        </div>
+
+    </div>
+    <div class="footer-nav">
+        <ol class="nav-bar">
+            <a href="#top"> Home </a>
+            <a href="#hero-2"> My Work </a>
+            <a href="projects.html"> Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+    <div class="footer2">All Right Reserved 2026</div>
+
+</footer>
+
+</html>
