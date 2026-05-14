@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .calculator_box table {
+            border-spacing: 20px;
+        }
+
+        .calculator_box {
+            margin: 25px auto;
+            background-color: rgb(218, 238, 255);
+            width: 95%;
+            border-radius: 25px;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, button{
+            padding: 2px 5px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.363);
+        }
+
+        #rst, #resultbtn {
+            width: 45%;
+        }
+    </style>
+
+
+
+</head>
+
+<a href="#top">
+    <div class="back2top"></div>
+</a>
+<header id="top">
+
+    <nav>
+        <a href="index.html">
+            <div class="logo">
+                <h2>Mayank.</h2>
+            </div>
+        </a>
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="about-me.html"> About Me </a>
+            <a href="contact.html"> Contact </a>
+
+        </ol>
+        <div class="hamburger"></div>
+
+    </nav>
+    <div class="mob-nav">
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="projects.html">Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+
+</header>
+
+
+<body>
+    <div class="back"><a href="javascript_content.html"> &larrhk; back</a></div>
+
+    <div class="calculator_box flex">
+        <div>
+            <h4 id="result">Your Result is: </h4>
+        </div>
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="num1">Enter First Number</label></td>
+                    <td><input id="num1" type="number" placeholder="Enter number"></td>
+                </tr>
+                <tr>
+                    <td><label for="op">Enter the operator</label></td>
+                    <td><input id="op" type="text" placeholder="+ / - *"></td>
+                </tr>
+                <tr>
+                    <td><label for="num2">Enter Second Number</label></td>
+                    <td><input id="num2" type="number" placeholder="Enter number"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input id="rst" type="reset">
+                        <button id="resultbtn" type="button">GO</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+
+        var num1 = document.getElementById("num1")
+        var num2 = document.getElementById("num2")
+        var op = document.getElementById("op")
+        var resultbtn = document.getElementById("resultbtn")
+        var result = document.getElementById("result")
+
+        resultbtn.onclick = calc
+
+        let ans
+        function calc() {
+
+            let a = parseInt(num1.value)
+            let b = parseInt(num2.value)
+            let operator = op.value
+
+
+            if (operator == '+') {
+                ans = a + b
+            }
+
+            else if (operator == '-') {
+                ans = a - b
+            }
+
+            else if (operator == '*') {
+                ans = a * b
+            }
+
+            else if (operator == '/') {
+                ans = a / b
+            }
+
+            else {
+                ans = "Invalid input"
+            }
+            result.innerText = "Your Result is: "+ ans
+        }
+    </script>
+
+</body>
+
+
+
+<footer class="flex">
+    <div class="footer1 flex">
+        <a href="index.html">
+            <div class="logo">
+                <h2>mayank.</h2>
+            </div>
+        </a>
+        <div class="socialicon flex
+	">
+            <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
+            <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
+            <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
+            <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
+        </div>
+
+    </div>
+    <div class="footer-nav">
+        <ol class="nav-bar">
+            <a href="#top"> Home </a>
+            <a href="#hero-2"> My Work </a>
+            <a href="projects.html"> Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+    <div class="footer2">All Right Reserved 2026</div>
+
+</footer>
+
+</html>
