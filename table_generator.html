@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main {
+            border: 2px solid black;
+            border-radius: 10px;
+            gap: 15px;
+            flex-direction: column;
+            width: 80%;
+            margin: 20px auto;
+            padding: 8px;
+        }
+
+        .table_container {
+            color: #3a3a6a;
+            background-color: azure;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        #h {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+            color: #e0e1dd;
+        }
+
+        #generate {
+
+            border: none;
+            padding: 8px 22px;
+            background: #ff3e7f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        #generate:hover {
+            background: #e62f6d;
+            transform: translateY(-3px);
+        }
+    </style>
+
+
+
+</head>
+
+<a href="#top">
+    <div class="back2top"></div>
+</a>
+<header id="top">
+
+    <nav>
+        <a href="index.html">
+            <div class="logo">
+                <h2>Mayank.</h2>
+            </div>
+        </a>
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="about-me.html"> About Me </a>
+            <a href="contact.html"> Contact </a>
+
+        </ol>
+        <div class="hamburger"></div>
+
+    </nav>
+    <div class="mob-nav">
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="projects.html">Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+
+</header>
+
+
+<body>
+    <div class="back"><a href="javascript_content.html"> &larrhk; back</a></div>
+
+    <main class="flex">
+
+        <div id="h">Table Generator with JS
+        </div>
+        <div class="table_container" id="table_container"></div>
+        <button id="generate">Generate Table</button>
+    </main>
+
+
+
+
+    <script>
+        var a = document.getElementById("h")
+        var b = document.getElementById("table_container")
+        var c = document.getElementById("generate")
+
+        let number
+        c.addEventListener("click", () => {
+            b.innerHTML = ""
+            number = prompt("Enter the Number: ", "1")
+            a.innerText = "Table of " + number
+
+            for (let i = 1; i <= 10; i++) {
+                b.innerHTML += "<h3>" + number + " x " + i + "= " + i * number + "</h3>"
+
+            }
+        })
+
+        document.title = "dfdf"
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+
+<footer class="flex">
+    <div class="footer1 flex">
+        <a href="index.html">
+            <div class="logo">
+                <h2>mayank.</h2>
+            </div>
+        </a>
+        <div class="socialicon flex
+	">
+            <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
+            <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
+            <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
+            <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
+        </div>
+
+    </div>
+    <div class="footer-nav">
+        <ol class="nav-bar">
+            <a href="#top"> Home </a>
+            <a href="#hero-2"> My Work </a>
+            <a href="projects.html"> Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+    <div class="footer2">All Right Reserved 2026</div>
+
+</footer>
+
+</html>

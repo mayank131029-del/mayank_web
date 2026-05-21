@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main {
+            align-items: center;
+            gap: 25px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+        }
+
+        .color {
+
+            border: 2px solid rgb(0, 0, 0);
+            width: 50%;
+            height: 250px;
+            border-radius: 25px;
+        }
+
+        #cngclr {
+            padding: 10px 25px;
+            border-radius: 5px;
+        }
+
+        #cngclr {
+
+            border: none;
+            padding: 12px 22px;
+            background: #ff3e7f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        #cngclr:hover {
+            background: #e62f6d;
+            transform: translateY(-3px);
+        }
+    </style>
+
+
+
+</head>
+
+<a href="#top">
+    <div class="back2top"></div>
+</a>
+<header id="top">
+
+    <nav>
+        <a href="index.html">
+            <div class="logo">
+                <h2>Mayank.</h2>
+            </div>
+        </a>
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="about-me.html"> About Me </a>
+            <a href="contact.html"> Contact </a>
+
+        </ol>
+        <div class="hamburger"></div>
+
+    </nav>
+    <div class="mob-nav">
+        <ol class="nav-bar">
+            <a href="index.html"> Home </a>
+            <a href="index.html"> My Work </a>
+            <a href="projects.html">Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+
+</header>
+
+
+<body>
+    <div class="back"><a href="javascript_content.html"> &larrhk; back</a></div>
+
+    <main>
+        <div class="color" id="color">
+
+        </div>
+        <input id="cngclr" type="button" value="Change Color">
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        var box = document.getElementById("color")
+        var btn = document.getElementById("cngclr")
+
+        function colorchange() {
+            var r = Math.round(Math.random() * 255)
+            var g = Math.round(Math.random() * 255)
+            var b = Math.round(Math.random() * 255)
+
+            // alert var rgb = "rgb("+r+","+g+","+b+")"
+
+
+            box.style.background = "rgb(" + r + "," + g + "," + b + ")"
+
+
+        }
+
+        btn.onclick = colorchange
+
+    </script>
+
+</body>
+
+
+
+<footer class="flex">
+    <div class="footer1 flex">
+        <a href="index.html">
+            <div class="logo">
+                <h2>mayank.</h2>
+            </div>
+        </a>
+        <div class="socialicon flex
+	">
+            <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
+            <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
+            <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
+            <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
+        </div>
+
+    </div>
+    <div class="footer-nav">
+        <ol class="nav-bar">
+            <a href="#top"> Home </a>
+            <a href="#hero-2"> My Work </a>
+            <a href="projects.html"> Projects </a>
+            <a href="index.html"> Contact </a>
+
+        </ol>
+    </div>
+    <div class="footer2">All Right Reserved 2026</div>
+
+</footer>
+
+</html>
