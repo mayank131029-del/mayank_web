@@ -1,3 +1,8 @@
+window.addEventListener("load", ()=>{
+
+    document.body.style.visibility = "visible";
+
+});
 
 
 const nav = document.querySelector(".mob-nav");
