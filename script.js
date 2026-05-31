@@ -1,3 +1,12 @@
+const favicon = document.createElement("link");
+
+favicon.rel = "icon";
+favicon.type = "image/png";
+favicon.href = "images/favicon.ico";
+
+document.head.appendChild(favicon);
+
+
 let header = document.getElementsByTagName("header")[0]
 header.setAttribute("id", "top")
 header.innerHTML = `<nav>
