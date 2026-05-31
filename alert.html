@@ -14,7 +14,8 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        body{
+
+        body {
             background-color: #e0e1dd;
         }
 
@@ -85,7 +86,8 @@
         #output {
             color: #333;
         }
-        .back{
+
+        .back {
             padding: 10px;
         }
     </style>
@@ -97,39 +99,13 @@
 <a href="#top">
     <div class="back2top"></div>
 </a>
-<header id="top">
-
-    <nav>
-        <a href="index.html">
-            <div class="logo">
-                <h2>Mayank.</h2>
-            </div>
-        </a>
-        <ol class="nav-bar">
-            <a href="index.html"> Home </a>
-            <a href="index.html"> My Work </a>
-            <a href="about-me.html"> About Me </a>
-            <a href="contact.html"> Contact </a>
-
-        </ol>
-        <div class="hamburger"></div>
-
-    </nav>
-    <div class="mob-nav">
-        <ol class="nav-bar">
-            <a href="index.html"> Home </a>
-            <a href="index.html"> My Work </a>
-            <a href="projects.html">Projects </a>
-            <a href="index.html"> Contact </a>
-
-        </ol>
-    </div>
+<header>
 
 </header>
 
 
 <body>
-     <div class="back"><a href="javascript_content.html"> &larrhk; back</a></div>
+    <div class="back"><a href="web_development.html"> &larrhk; back</a></div>
     <section class="js-demo">
         <div class="demo-card">
             <h1>JavaScript Alert & Prompt Demo</h1>
@@ -152,13 +128,13 @@
 
     <script>
 
-        document.querySelector("#alert").onclick = function() {
+        document.querySelector("#alert").onclick = function () {
             alert("This is JavaScript alert box!")
         }
-        document.querySelector("#prompt").onclick = function() {
+        document.querySelector("#prompt").onclick = function () {
             var name = prompt("What's your Name?")
             var p = document.querySelector(".output")
-            p.innerText = "Hello "+ name
+            p.innerText = "Hello " + name
         }
 
     </script>
@@ -198,13 +174,3 @@
 </footer>
 
 </html>
-
-
-
-
-
-
-
-
-
-

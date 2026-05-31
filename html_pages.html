@@ -17,7 +17,6 @@
 
 
             html {
-                overflow-x: hidden;
                 background: #e0e1dd;
             }
 
@@ -36,7 +35,7 @@
 
             main {
                 grid-template-columns: repeat(3, 1fr);
-                padding: 50px 30px;
+                padding: 35px 30px;
                 box-sizing: border-box;
                 flex-wrap: wrap;
                 gap: 35px;
@@ -48,35 +47,40 @@
                 color: #181e2e;
                 font-size: 40px;
                 text-align: center;
+                text-shadow: 0px 5px 10px #dbdbdb;
             }
 
 
-            #alert {
-                background-image: url(images/alert&prompt.webp);
+            #photo-gallery {
+                background-image: url(images/photogallery.webp);
             }
 
-            #POPUP {
-                background-image: url(images/popup.webp);
+            #forms {
+                background-image: url(images/foms.webp);
             }
 
-            #calculator {
-                background-image: url(images/functions.webp);
+            #table {
+                background-image: url(images/tables.webp);
             }
 
-            #colorchange {
-                background-image: url(images/random.webp);
+            #list {
+                background-image: url(images/list.webp);
             }
 
-            #table_generator {
-                background-image: url(images/for\ loop.webp);
+            #banner {
+                background-image: url(images/banner.webp);
             }
 
-            #clock {
-                background-image: url(images/age_calculator.webp);
+            #iframes {
+                background-image: url(images/iframes.webp);
             }
 
-            #age_calculator {
-                background-image: url(images/age_calculator.webp);
+            #media {
+                background-image: url(images/media.webp);
+            }
+
+            #stack {
+                background-image: url(images/media.webp);
             }
 
 
@@ -115,17 +119,10 @@
                 margin: 5px auto;
             }
 
-
-
-            #js {
+            #html {
                 border-radius: 30px;
                 background-color: brown;
                 padding: 12px 30px;
-            }
-            .jspage{
-                width: 100vw;
-                height: 80vh;
-                overflow-x: hidden;
             }
 
             @media (max-width:880px) and (min-width:650px) {
@@ -146,121 +143,90 @@
                     text-decoration: none;
                 }
             }
-
         </style>
 
     </head>
-    <a href="#top">
-        <div class="back2top"></div>
-    </a>
-    <header>
 
-    </header>
 
     <body>
-        <a href="#top">
-            <div class="back2top"></div>
-        </a>
-        <div class="back"><a href="index.html"> &larrhk; back</a></div>
-        <div class="menu flex">
-            <ul>
-                <li id="html"><a href="web_content.html">HTML + CSS</a></li>
-                <li id="js"><a href="javascript_content.html">JavaScript</a></li>
-                <li id="projects"><a href="projects.html">Projects</a></li>
-            </ul>
-        </div>
-        <h1 class="heading1">Practice Work</h1>
-        <!-- <main class="flex">
-            <a href="alert.html">
-                <div class="web-content-card" id="alert">
+
+        <main class="flex">
+            <a href="photogallery.html">
+                <div class="web-content-card" id="photo-gallery">
                     <div class="overlay flex">
 
-                        <h2>ALERT & PROMPT</h2>
+                        <h2>PHOTOGALLERY</h2>
                     </div>
                 </div>
             </a>
-            <a href="popup.html">
-                <div class="web-content-card" id="popup">
+            <a href="regestration form.html">
+                <div class="web-content-card" id="forms">
                     <div class="overlay flex">
 
-                        <h2>OVERLAY POPUP</h2>
+                        <h2>FORMS</h2>
                     </div>
                 </div>
             </a>
-            <a href="calculator.html">
-                <div class="web-content-card" id="calculator">
+            <a href="table.html">
+                <div class="web-content-card" id="table">
                     <div class="overlay flex">
 
-                        <h2>FUNCTION ()</h2>
+                        <h2>TABLES</h2>
                     </div>
                 </div>
             </a>
-            <a href="random_color.html">
-                <div class="web-content-card" id="colorchange">
+            <a href="list.html">
+                <div class="web-content-card" id="list">
                     <div class="overlay flex">
 
-                        <h2>RANDOM No.</h2>
+                        <h2>LISTS</h2>
                     </div>
                 </div>
             </a>
-            <a href="table_generator.html">
-                <div class="web-content-card" id="table_generator">
+            <a href="banner.html">
+                <div class="web-content-card" id="banner">
                     <div class="overlay flex">
 
-                        <h2>LOOPS</h2>
+                        <h2>BANNER</h2>
                     </div>
                 </div>
             </a>
-            <a href="time&date.html">
-                <div class="web-content-card" id="clock">
+            <a href="iframes.html">
+                <div class="web-content-card" id="iframes">
                     <div class="overlay flex">
 
-                        <h2>DATE()</h2>
+                        <h2>IFRAMES</h2>
                     </div>
                 </div>
             </a>
-            <a href="age_calculator.html">
-                <div class="web-content-card" id="age_calculator">
+            <a href="media.html">
+                <div class="web-content-card" id="media">
                     <div class="overlay flex">
 
-                        <h2>AGE CALCULATOR</h2>
+                        <h2>MEDIA</h2>
                     </div>
                 </div>
             </a>
+            <a href="stack.html">
+                <div class="web-content-card" id="stack">
+                    <div class="overlay flex">
 
-        </main> -->
-        <iframe class="jspage" src="test1.html" frameborder="0"></iframe>
+                        <h2>POSITION</h2>
+                    </div>
+                </div>
+            </a>
+        </main>
         <script src="script.js"></script>
+        <script>
+             const a = document.getElementsByTagName("a");
+            for (let i = 0; i < a.length; i++) {
+                a[i].target = "_top"
+            }
+        </script>
 
     </body>
 
 
-    <footer class="flex">
-        <div class="footer1 flex">
-            <a href="index.html">
-                <div class="logo">
-                    <h2>mayank.</h2>
-                </div>
-            </a>
-            <div class="socialicon flex
-	">
-                <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
-                <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
-                <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
-                <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
-            </div>
 
-        </div>
-        <div class="footer-nav">
-            <ol class="nav-bar">
-                <a href="index.html"> Home </a>
-                <a href="web_content.html"> My Work </a>
-                <a href="projects.html">Projects </a>
-                <a href="index.html"> Contact </a>
-
-            </ol>
-        </div>
-        <div class="footer2">All Right Reserved 2026</div>
-    </footer>
 
     </html>

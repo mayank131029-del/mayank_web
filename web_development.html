@@ -5,7 +5,7 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Web Content</title>
+        <title>Web Developemnt</title>
         <link rel="stylesheet" href="style.css">
         <style>
             * {
@@ -32,6 +32,9 @@
                 transition: all 0.2s ease-in-out;
             }
 
+            #my-work{
+			 border-bottom: 2px solid white;
+		}
 
 
             main {
@@ -117,15 +120,27 @@
 
 
 
-            #js {
+            #js,
+            #html,
+            #projects {
+                color: white;
+                cursor: pointer;
                 border-radius: 30px;
-                background-color: brown;
+                /* background-color: bown; */
                 padding: 12px 30px;
             }
-            .jspage{
+            
+            .jspage {
                 width: 100vw;
                 height: 80vh;
                 overflow-x: hidden;
+            }
+            
+            
+            .activetab {
+             
+                color: white;
+                background: brown;
             }
 
             @media (max-width:880px) and (min-width:650px) {
@@ -135,8 +150,15 @@
                     text-decoration: none;
                 }
             }
-
+            
             @media (max-width:650px) {
+                
+                .heading1{
+                    margin: auto;
+                    text-align: center;
+                    width: 85%;
+                    font-size: 35px;
+                }
                 main {
                     width: 90%;
                 }
@@ -146,7 +168,6 @@
                     text-decoration: none;
                 }
             }
-
         </style>
 
     </head>
@@ -161,12 +182,10 @@
         <a href="#top">
             <div class="back2top"></div>
         </a>
-        <div class="back"><a href="index.html"> &larrhk; back</a></div>
         <div class="menu flex">
             <ul>
-                <li id="html"><a href="web_content.html">HTML + CSS</a></li>
-                <li id="js"><a href="javascript_content.html">JavaScript</a></li>
-                <li id="projects"><a href="projects.html">Projects</a></li>
+                <li id="html">HTML + CSS</li>
+                <li id="js">Java Script</li>
             </ul>
         </div>
         <h1 class="heading1">Practice Work</h1>
@@ -229,8 +248,69 @@
             </a>
 
         </main> -->
-        <iframe class="jspage" src="test1.html" frameborder="0"></iframe>
-        <script src="script.js"></script>
+        <iframe class="jspage" id="frame" src="html_pages.html" frameborder="0"></iframe>
+
+
+        
+
+<script src="script.js"></script>
+        <script>
+
+            let frame = document.getElementById("frame")
+           let savedPage = localStorage.getItem("activePage"); 
+            let heading = document.querySelector(".heading1")
+
+            let html = document.getElementById("html")
+            let js = document.getElementById("js")
+
+
+
+            if (savedPage) {
+                frame.src = savedPage;
+            } else {
+                frame.src = "html_pages.html";
+            }
+
+
+            if (savedPage === "html_pages.html") {
+                html.classList.add("activetab");
+            }
+            if (savedPage === "js_page.html") {
+                js.classList.add("activetab");
+            }
+
+            html.addEventListener("click", () => {
+                heading.innerHTML = "HTML + CSS Practice Work"
+                frame.src = "html_pages.html"
+                localStorage.setItem("activePage", "html_pages.html")
+            })
+            js.addEventListener("click", () => {
+                heading.innerHTML = "JavaSricpt Practice Work"
+                frame.src = "js_page.html"
+                localStorage.setItem("activePage", "js_page.html")
+            })
+
+            let menu = [html, js]
+
+            menu.forEach(item => {
+                item.addEventListener("click", () => {
+                    menu.forEach(tab => {
+                        tab.classList.remove("activetab")
+                    })
+                    item.classList.add("activetab")
+
+                })
+
+            })
+
+          
+
+
+            document.title ="fdhfhi"
+            console.log(localStorage.getItem("activePage"))
+
+        </script>
+        
 
     </body>
 

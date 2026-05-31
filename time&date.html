@@ -4,47 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alert</title>
+    <title>Timer & Date</title>
     <link rel="stylesheet" href="style.css">
+    
+
 
     <style>
-        main {
-            align-items: center;
-            gap: 25px;
-            display: flex;
-            flex-direction: column;
-            padding: 40px;
-        }
 
-        .color {
 
-            border: 2px solid rgb(0, 0, 0);
-            width: 50%;
-            height: 250px;
-            border-radius: 25px;
-        }
+main{
+    width: 75%;
+    padding: 25px;
 
-        #cngclr {
-            padding: 10px 25px;
-            border-radius: 5px;
-        }
+    border-radius: 10px;
+    background-color: rgb(238, 239, 255);
+    color: #0d1b2a;
+    margin: 20px auto;
+}
+main .heading{
+    color: #0d1b2a;
+    text-align: left;
+    margin: 15px 0;
+    font-size: 38px;
 
-        #cngclr {
+}
 
-            border: none;
-            padding: 12px 22px;
-            background: #ff3e7f;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        #cngclr:hover {
-            background: #e62f6d;
-            transform: translateY(-3px);
-        }
+main h2{
+    margin: 10px 0;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #e0e1dd;
+    background: #212136;
+}
     </style>
 
 
@@ -61,35 +53,36 @@
 
 <body>
     <div class="back"><a href="web_development.html"> &larrhk; back</a></div>
+    
+        <main>
+            <h1 class="heading">Using Date() Function in JavaScript.</h1>
+            <h2>Current Time is : <span id="clock"></span>
+        </h2>
+            <h2>Current Date is : <span id="date"></span>
+        </h2>
+        </main>
 
-    <main>
-        <div class="color" id="color">
 
-        </div>
-        <input id="cngclr" type="button" value="Change Color">
-    </main>
+    
 
     <script src="script.js"></script>
 
     <script>
+        let clock = document.getElementById("clock")
+        let date = document.getElementById("date")
+        let full_time
+        let time = new Date()
+        date.innerHTML = `${time.getDate()}/${time.getMonth()}/${time.getUTCFullYear()}`
+        
+        setInterval(() => {
+            let time = new Date()
+             full_time = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+                clock.innerHTML = full_time
+        }, 1000);
+        
 
-        var box = document.getElementById("color")
-        var btn = document.getElementById("cngclr")
 
-        function colorchange() {
-            var r = Math.round(Math.random() * 255)
-            var g = Math.round(Math.random() * 255)
-            var b = Math.round(Math.random() * 255)
-
-            // alert var rgb = "rgb("+r+","+g+","+b+")"
-
-
-            box.style.background = "rgb(" + r + "," + g + "," + b + ")"
-
-
-        }
-
-        btn.onclick = colorchange
+        
 
     </script>
 

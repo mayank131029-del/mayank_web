@@ -17,7 +17,7 @@
 
 
             html {
-                overflow-x: hidden;
+                /* overflow: hidden; */
                 background: #e0e1dd;
             }
 
@@ -122,11 +122,6 @@
                 background-color: brown;
                 padding: 12px 30px;
             }
-            .jspage{
-                width: 100vw;
-                height: 80vh;
-                overflow-x: hidden;
-            }
 
             @media (max-width:880px) and (min-width:650px) {
 
@@ -146,31 +141,16 @@
                     text-decoration: none;
                 }
             }
-
         </style>
 
     </head>
-    <a href="#top">
-        <div class="back2top"></div>
-    </a>
-    <header>
 
-    </header>
 
     <body>
-        <a href="#top">
-            <div class="back2top"></div>
-        </a>
-        <div class="back"><a href="index.html"> &larrhk; back</a></div>
-        <div class="menu flex">
-            <ul>
-                <li id="html"><a href="web_content.html">HTML + CSS</a></li>
-                <li id="js"><a href="javascript_content.html">JavaScript</a></li>
-                <li id="projects"><a href="projects.html">Projects</a></li>
-            </ul>
-        </div>
-        <h1 class="heading1">Practice Work</h1>
-        <!-- <main class="flex">
+       
+
+
+        <main class="flex">
             <a href="alert.html">
                 <div class="web-content-card" id="alert">
                     <div class="overlay flex">
@@ -228,39 +208,17 @@
                 </div>
             </a>
 
-        </main> -->
-        <iframe class="jspage" src="test1.html" frameborder="0"></iframe>
+        </main>
         <script src="script.js"></script>
+
+        <script>
+            const a = document.getElementsByTagName("a");
+            for (let i = 0; i < a.length; i++) {
+                a[i].target = "_top"
+            }
+        </script>
 
     </body>
 
-
-    <footer class="flex">
-        <div class="footer1 flex">
-            <a href="index.html">
-                <div class="logo">
-                    <h2>mayank.</h2>
-                </div>
-            </a>
-            <div class="socialicon flex
-	">
-                <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
-                <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
-                <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
-                <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
-            </div>
-
-        </div>
-        <div class="footer-nav">
-            <ol class="nav-bar">
-                <a href="index.html"> Home </a>
-                <a href="web_content.html"> My Work </a>
-                <a href="projects.html">Projects </a>
-                <a href="index.html"> Contact </a>
-
-            </ol>
-        </div>
-        <div class="footer2">All Right Reserved 2026</div>
-    </footer>
 
     </html>

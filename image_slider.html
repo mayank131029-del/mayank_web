@@ -4,46 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alert</title>
+    <title>Timer & Date</title>
     <link rel="stylesheet" href="style.css">
+
+
 
     <style>
         main {
-            align-items: center;
-            gap: 25px;
+            overflow: hidden;
+            width: 50vw;
+            border-radius: 10px;
+            background-color: rgb(238, 239, 255);
+            color: #0d1b2a;
+            margin: 20px auto;
+        }
+
+        .image_box {
             display: flex;
-            flex-direction: column;
-            padding: 40px;
+            margin-right: 50px;
         }
 
-        .color {
+        .images {
+            margin: 0;
+            width: 50vw;
 
-            border: 2px solid rgb(0, 0, 0);
-            width: 50%;
-            height: 250px;
-            border-radius: 25px;
         }
 
-        #cngclr {
-            padding: 10px 25px;
-            border-radius: 5px;
-        }
-
-        #cngclr {
-
-            border: none;
-            padding: 12px 22px;
-            background: #ff3e7f;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        #cngclr:hover {
-            background: #e62f6d;
-            transform: translateY(-3px);
+        .input_container {
+            text-align: center;
         }
     </style>
 
@@ -63,33 +51,33 @@
     <div class="back"><a href="web_development.html"> &larrhk; back</a></div>
 
     <main>
-        <div class="color" id="color">
 
+        <div class="image_box fex" id="images_box">
+            <img src="images/banner1.webp" alt="" class="images">
+            <img src="images/banner2.webp" alt="" class="images">
+            <img src="images/banner3.webp" alt="" class="images">
+            <img src="images/banner4.webp" alt="" class="images">
+            <img src="images/banner5.webp" alt="" class="images">
         </div>
-        <input id="cngclr" type="button" value="Change Color">
+
     </main>
+    <div class="input_container">
+        <input type="range" min="0" id="slider">
+    </div>
+
+
+
 
     <script src="script.js"></script>
 
     <script>
+        let images = document.getElementById("images_box")
+        let slider = document.getElementById("slider")
+        slider.max = (viewportWidth / 2) * 4
 
-        var box = document.getElementById("color")
-        var btn = document.getElementById("cngclr")
-
-        function colorchange() {
-            var r = Math.round(Math.random() * 255)
-            var g = Math.round(Math.random() * 255)
-            var b = Math.round(Math.random() * 255)
-
-            // alert var rgb = "rgb("+r+","+g+","+b+")"
-
-
-            box.style.background = "rgb(" + r + "," + g + "," + b + ")"
-
-
-        }
-
-        btn.onclick = colorchange
+        slider.addEventListener("input", () => {
+            images.style.marginLeft = -slider.value + "px"
+        })
 
     </script>
 
