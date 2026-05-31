@@ -8,7 +8,7 @@ header.innerHTML = `<nav>
       </a>
       <ol class="nav-bar">
         <a id="index" href="index.html"> Home </a>
-        <a id="my-work" href="#hero-2"> My Work </a>
+        <a class="my-work" href="#hero-2"> My Work </a>
         <a id="index_project" href="projects.html"> Projects </a>
         <a id="contact" href="contact.html"> Contact </a>
 
@@ -19,9 +19,9 @@ header.innerHTML = `<nav>
     <div class="mob-nav">
       <ol class="nav-bar">
         <a href="index.html"> Home </a>
-        <a href="#hero-2"> My Work </a>
-        <a href="web_development.html"> Projects </a>
-        <a href="index.html"> Contact </a>
+        <a class="my-work" href="#hero-2"> My Work </a>
+        <a href="projects.html"> Projects </a>
+        <a href="contact.html"> Contact </a>
 
       </ol>
     </div>`
@@ -45,21 +45,32 @@ header.innerHTML = `<nav>
 	</div>
 	<div class="footer-nav">
 		<ol class="nav-bar">
-			<a href="#top"> Home </a>
-			<a href="#hero-2"> My Work </a>
+			<a href="index.html"> Home </a>
+			<a class="my-work" href="#hero-2"> My Work </a>
 			<a href="projects.html"> Projects </a>
-			<a href="index.html"> Contact </a>
+			<a href="contact.html"> Contact </a>
 
 		</ol>
 	</div>
 	<div class="footer2">All Right Reserved 2026</div>`
 
 
-let my_work = document.getElementById("my-work")
-my_work.addEventListener("click", () => {
-  location.href = "index.html#hero-2"
+let my_work = document.querySelectorAll(".my-work")
 
+my_work.forEach(item =>{
+  item.addEventListener("click",()=>{
+    location.href = "index.html#hero-2"
+  })
 })
+
+
+// my_work.addEventListener("click", () => {
+//   location.href = "index.html#hero-2"
+
+// })
+
+
+
 console.log(localStorage.getItem("activePage"))
 
 window.addEventListener("load", () => {
@@ -79,8 +90,7 @@ hambutton.addEventListener("click", () => {
 })
 
 
-let viewportWidth = window.innerWidth;
-console.log(viewportWidth);
+
 
 
 const back2top = document.querySelector(".back2top")

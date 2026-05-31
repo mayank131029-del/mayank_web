@@ -9,14 +9,15 @@
 
     <style>
         main {
+            
             border: 2px solid black;
             text-align: center;
             border-radius: 10px;
             gap: 20px;
             flex-direction: column;
             width: 80%;
-            margin: 20px auto;
-            padding: 8px;
+            margin: 20vh auto;
+            padding: 20px;
         }
 
         #calculate {
@@ -45,15 +46,14 @@
 
         }
 
-        label{
-            margin-right:15px ;
+        label {
+            margin-right: 15px;
         }
 
         input {
             padding: 2px 8px;
             border-radius: 5px;
         }
-        
     </style>
 
 
@@ -65,7 +65,7 @@
 </a>
 <header>
 
-    </header>
+</header>
 
 
 <body>
@@ -75,12 +75,12 @@
         <h2>Age calculator</h2>
         <div>
             <form action="">
-            <div>
-                <label for="age">Enter your Date of Birth</label>
-                <input type="date" id="age">
-            </div>
-            <input type="button" value="Calculate" id="calculate">
-            <input type="reset">
+                <div>
+                    <label for="age">Enter your Date of Birth</label>
+                    <input type="date" id="age">
+                </div>
+                <input type="button" value="Calculate" id="calculate">
+                <input type="reset">
             </form>
         </div>
         <h3 id="result_line">Your Age will be shown here</h3>
@@ -126,12 +126,12 @@
         calculate.addEventListener("click", () => {
 
             if (input.value !== "") {
-                
+
                 age_calculator()
             }
             else {
                 alert("Please Enter your DOB First")
-                
+
 
             }
 
@@ -144,39 +144,14 @@
 
     </script>
 
-    <script src="script.js"></script>
 
 </body>
 
 
 
-<footer class="flex">
-    <div class="footer1 flex">
-        <a href="index.html">
-            <div class="logo">
-                <h2>mayank.</h2>
-            </div>
-        </a>
-        <div class="socialicon flex
-	">
-            <a id="behance" href="https://www.behance.net/digital_artx" target="_blank"></a>
-            <a id="instagram" href="https://www.instagram.com/digital_artx__1/" target="_blank"></a>
-            <a id="whatsapp" href="https://wa.me/918708189664" target="_blank"></a>
-            <a id="pinterest" href="https://in.pinterest.com/Digital_artx__1/" target="_blank"></a>
-        </div>
-
-    </div>
-    <div class="footer-nav">
-        <ol class="nav-bar">
-            <a href="#top"> Home </a>
-            <a href="#hero-2"> My Work </a>
-            <a href="projects.html"> Projects </a>
-            <a href="index.html"> Contact </a>
-
-        </ol>
-    </div>
-    <div class="footer2">All Right Reserved 2026</div>
-
+<footer>
+    
 </footer>
+<script src="script.js"></script>
 
 </html>
