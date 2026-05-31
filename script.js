@@ -4,7 +4,7 @@ favicon.rel = "icon";
 favicon.type = "image/png";
 favicon.href = "images/favicon.ico";
 
-document.head.appendChild(favicon)
+document.head.appendChild(favicon);
 
 
 let header = document.getElementsByTagName("header")[0]
@@ -35,9 +35,9 @@ header.innerHTML = `<nav>
       </ol>
     </div>`
 
-    let footer = document.getElementsByTagName("footer")[0]
-    footer.classList.add("flex")
-    footer.innerHTML = `<div class="footer1 flex">
+let footer = document.getElementsByTagName("footer")[0]
+footer.classList.add("flex")
+footer.innerHTML = `<div class="footer1 flex">
 		<a href="index.html">
 			<div class="logo">
 				<h2>mayank.</h2>
@@ -66,8 +66,8 @@ header.innerHTML = `<nav>
 
 let my_work = document.querySelectorAll(".my-work")
 
-my_work.forEach(item =>{
-  item.addEventListener("click",()=>{
+my_work.forEach(item => {
+  item.addEventListener("click", () => {
     location.href = "index.html#hero-2"
   })
 })

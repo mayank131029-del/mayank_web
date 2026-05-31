@@ -10,6 +10,17 @@
 
 
     <style>
+        .cool-range {
+            width: 320px;
+            appearance: none;
+            -webkit-appearance: none;
+            height: 12px;
+            border-radius: 50px;
+            background: linear-gradient(90deg,
+                    #2563eb,
+                    #7c3aed);
+        }
+
         main {
             overflow: hidden;
             width: 50vw;
@@ -31,7 +42,78 @@
         }
 
         .input_container {
+            padding: 0px 0 20px 0;
             text-align: center;
+        }
+
+        .input_container2 {
+            flex-direction: column;
+            gap: 2px;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            width: 50vw;
+            margin: 25px auto;
+            padding: 25px 10px;
+            border-radius: 12px;
+        }
+
+        #file {
+            width: 300px;
+            padding: 10px;
+            border: 2px dashed #4f46e5;
+            border-radius: 15px;
+            background: #f8faff;
+            color: #333;
+            cursor: pointer;
+        }
+
+        #file::file-selector-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #4f46e5;
+            color: white;
+            cursor: pointer;
+            margin-right: 15px;
+            transition: .3s;
+        }
+
+        #file::file-selector-button:hover {
+            background: #3730a3;
+        }
+
+        #addimg {
+            width: 35%;
+            margin-top: 20px;
+            border: none;
+            padding: 4px 22px;
+            background: #3730a3;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        #addimg:hover {
+            background: #3730a3;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 650px) {
+
+            main {
+                width: 90vw;
+            }
+
+            .images {
+                width: 90vw;
+            }
+
+            .input_container2 {
+                width: 90vw;
+            }
         }
     </style>
 
@@ -62,18 +144,61 @@
 
     </main>
     <div class="input_container">
-        <input type="range" min="0" id="slider">
+        <input class="cool-range" type="range" min="0" id="slider">
     </div>
 
-    <script>
-        let viewportWidth = window.innerWidth;
-        console.log(viewportWidth);
-        let images = document.getElementById("images_box")
-        let slider = document.getElementById("slider")
-        slider.max = (viewportWidth / 2) * 4
 
+    <div class="input_container input_container2 flex">
+        <input type="file" id="file">
+        <button id="addimg" value="Add Image">Add Image</button>
+
+    </div>
+    <script>
+        let url
+
+        let viewportWidth = window.innerWidth;
+        let images_box = document.getElementById("images_box")
+
+        let slider = document.getElementById("slider")
+        let mainwidth = document.getElementsByTagName("main")[0]
+        // console.log(getComputedStyle(mainwidth).width)
+        mainwidth = parseFloat(getComputedStyle(mainwidth).width)
+        let addimg = document.getElementById("addimg")
+        let file = document.getElementById("file")
+
+        file.addEventListener("change", () => {
+            url = URL.createObjectURL(file.files[0])
+            console.log(url)
+
+        })
+
+
+        let simage = document.getElementsByTagName("img")
+        // let imgheight = getComputedStyle(simage[0]).height
+        let imgwidth = getComputedStyle(simage[0]).width
+
+        // console.log(imgheight)
+
+        addimg.addEventListener("click", () => {
+            let newimg = document.createElement("img")
+            newimg.setAttribute("class", "images")
+            newimg.src = `${url}`
+            images_box.appendChild(newimg)
+            console.log(simage.length)
+            slider.max = mainwidth * (simage.length - 1)
+            file.value = ""
+            for (let item of simage) {
+                // item.style.height = imgheight;
+                item.style.width = imgwidth;
+            }
+        })
+
+        slider.max = mainwidth * (simage.length - 1)
+
+        // console.log(slider.max)
+        // console.log(simage.length-1)
         slider.addEventListener("input", () => {
-            images.style.marginLeft = -slider.value + "px"
+            images_box.style.marginLeft = -slider.value + "px"
         })
 
     </script>
