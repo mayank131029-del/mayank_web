@@ -4,7 +4,7 @@ favicon.rel = "icon";
 favicon.type = "image/png";
 favicon.href = "images/favicon.ico";
 
-document.head.appendChild(favicon);
+document.head.appendChild(favicon)
 
 
 let header = document.getElementsByTagName("header")[0]
