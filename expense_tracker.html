@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            margin: 50px 0;
+            /* height: 80vh; */
+        }
+
+        .input_box {
+            gap: 25px;
+            flex-direction: column;
+            width: 40%;
+            /* align-items: center; */
+        }
+
+        .input {
+            flex-direction: column;
+        }
+
+        #add {
+            width: 100%;
+            border: none;
+            margin-top: 20px;
+            padding: 4px 22px;
+            background: #3730a3;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        #add:hover,
+        .action-btn:hover {
+            background: #3730a3;
+            transform: translateY(-3px);
+        }
+
+        .action-btn {
+            margin: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+            width: 90%;
+            border: none;
+            background: #3730a3;
+            padding: 4px 22px;
+            border-radius: 5px;
+            color: white;
+            /* padding: ; */
+        }
+
+        input, select, option{
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 50px auto;
+        }
+
+        tr {
+            border: 1px solid black;
+
+        }
+
+        td {
+            text-align: center;
+        }
+
+        table tr th {
+            padding: 5px 15px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .black {
+            color: green;
+        }
+
+        .total {
+            gap: 30px;
+        }
+        .heading{
+            text-align: center;
+            color: black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<header></header>
+
+
+<body>
+    <!-- Expense Counter with a input of title and amount and a category of Expense or Income
+      -->
+
+<div>
+    <h2 class="heading">Expanse Tracker</h2>
+</div>
+    <main class="flex">
+        <div class="input_box flex">
+            <div class="input flex">
+                <label for="title">Add title</label>
+                <input type="text" id="title" placeholder="Enter the title">
+            </div>
+            <div class="input flex">
+                <label for="amount">Add Amount</label>
+                <input type="number" id="amount" placeholder="Enter the amount">
+            </div>
+            <div class="input flex">
+                <label for="type">Select Expense or Revenue</label>
+                <select name="" id="type">
+                    <option value="exp">Expense</option>
+                    <option value="rev">Revenue</option>
+                </select>
+            </div>
+            <div class="input flex">
+                <button id="add" onclick="addtolist()">Add to list</button>
+            </div>
+        </div>
+        <div class="total flex">
+            <h4 id="exp">Total Expanse : 00</h4>
+
+            <h4 id="rev">Total Revenue : 00</h4>
+        </div>
+    </main>
+
+    <section>
+        <table border="0" id="table">
+            <tr>
+                <th>S.no</th>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+
+        </table>
+    </section>
+
+
+</body>
+
+
+<footer></footer>
+<script src="script.js"></script>
+
+<script>
+    let exp = document.getElementById("exp")
+    let rev = document.getElementById("rev")
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    let allinput = document.querySelectorAll("input");
+    let table = document.getElementById("table");
+    let title = document.getElementById("title");
+    let amount = document.getElementById("amount");
+    let type = document.getElementById("type");
+
+    function totalTrans() {
+        // let expamt = document.querySelectorAll(".red")
+        // let revamt = document.querySelectorAll(".black")
+        let totalE = 0
+        let totalR = 0
+        transactions.forEach(item => {
+            if (item.type === "exp") 
+            {
+                totalE += parseFloat(item.amount)
+            }
+            
+            else if(item.type ==="rev")
+            {
+                totalR += parseFloat(item.amount)
+
+            }
+        })
+        exp.innerHTML = `Total Expanse : ₹ ${totalE}`
+        rev.innerHTML = `Total Revenue : ₹ ${totalR}`
+
+    }
+
+    function addtolist() {
+        let transaction = {
+            title: title.value,
+            amount: amount.value,
+            type: type.value
+        };
+
+        transactions.push(transaction);
+
+        localStorage.setItem("transactions", JSON.stringify(transactions));
+
+        renderTable();
+
+        allinput.forEach(item => item.value = "");
+    }
+
+    function renderTable() {
+        table.innerHTML = `<tr>
+                <th>S.no</th>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>`+ "";
+
+        transactions.forEach((item, index) => {
+            table.innerHTML += `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${item.title}</td>
+                <td class="${item.type === "exp" ? "red" : "black"}">${item.amount}</td>
+                <td>
+                    <button class="action-btn" data-index="${index}">Delete</button>
+                </td>
+            </tr>
+        `;
+        });
+        totalTrans()
+    }
+
+    table.addEventListener("click", (e) => {
+       
+       
+        if (e.target.classList.contains("action-btn")) {
+
+            if (confirm("Are you Sure!") === true) {
+                
+                e.target.closest("tr").remove();
+                let index = e.target.dataset.index;
+    
+                transactions.splice(index, 1);
+    
+                localStorage.setItem("transactions", JSON.stringify(transactions));
+    
+                renderTable();
+            }
+
+
+        }
+    });
+
+    renderTable();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // type.addEventListener("change", ()=>{
+
+    //     console.log(type.value)
+    // })
+
+
+
+
+
+</script>
+
+</html>
