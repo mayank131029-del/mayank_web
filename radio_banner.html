@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            padding: 50px 0;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 50%;
+        }
+        .slides{
+            width: 100%;
+            background-color: azure;
+        }
+        #img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .radios{
+            display: flex;
+            gap: 10px;
+        }
+        
+        @media (max-width: 650px) {
+
+        }
+    </style>
+</head>
+<header></header>
+
+<body>
+<div class="back"><a href="web_development.html"> &larrhk; back</a></div>
+    <main class="flex">
+        <div class="flex container">
+            <div class="slides">
+                <img id="img" src="images/banner1.webp" alt="">
+            </div>
+            <div class="radios">
+                <input type="radio" name="radio" class="radio">
+                <input type="radio" name="radio" class="radio">
+                <input type="radio" name="radio" class="radio">
+                <input type="radio" name="radio" class="radio">
+                <input type="radio" name="radio" class="radio">
+            </div>
+        </div>
+    </main>
+
+</body>
+
+
+<footer></footer>
+
+<script>
+
+let images = [
+    "images/banner1.webp",
+    "images/banner2.webp",
+    "images/banner3.webp",
+    "images/banner4.webp",
+    "images/banner5.webp",
+]
+let count = 0
+let img = document.getElementById("img")
+let radio = document.querySelectorAll(".radio")
+
+// function load(){
+//    t = setInterval(() => {
+//         img.src = images[count]
+//         radio[count].checked = true
+//         count++
+//         if (count==images.length) {
+//             count = 0
+//         }
+//     }, 1000);
+// }
+
+
+
+// recursive funtion
+
+function load(){
+   t = setTimeout(() => {
+        img.src = images[count]
+        radio[count].checked = true
+        count++
+        if (count==images.length) {
+            count = 0
+        }
+        load()
+    }, 1000);
+}
+
+load()
+
+radio.forEach((element, index)=>{
+    element.addEventListener("click", ()=>{
+        clearInterval(t)
+        count = index
+         img.src = images[count]
+        console.log(count);
+        setTimeout(() => {
+            load()
+        }, 2000);
+        
+    })
+    
+})
+
+
+</script>
+
+<script src="script.js"></script>
+
+</html>
