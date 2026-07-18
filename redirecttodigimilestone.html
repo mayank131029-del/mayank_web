@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f172a;
+    color:#fff;
+}
+
+.card{
+    max-width:650px;
+    width:90%;
+    padding:40px;
+    border-radius:16px;
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+h1{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+h2{
+    color:#60a5fa;
+    margin-bottom:20px;
+}
+
+p, a{
+    text-decoration: none;
+    font-size:1.05rem;
+    line-height:1.7;
+    color:#d1d5db;
+}
+
+.loader{
+    width:55px;
+    height:55px;
+    border:5px solid rgba(255,255,255,.15);
+    border-top-color:#3b82f6;
+    border-radius:50%;
+    margin:35px auto 20px;
+    animation:spin 1s linear infinite;
+}
+
+small{
+    color:#94a3b8;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Redirecting...</h1>
+
+    <h2>DigiMilestone</h2>
+
+    <p>
+        This website was designed and developed by
+        <strong><a href="https://mayank131029-del.github.io/mayank_web/" target="_blank" rel="noopener">Mayank</a></strong> as the part of 
+        <strong><a href="https://techwix.in" target="_blank" rel="noopener">Techwix.in</a></strong> team.
+    </p>
+
+    <div class="loader"></div>
+
+    <small>You will be redirected automatically in 5 seconds.</small>
+</div>
+
+<script>
+setTimeout(() => {
+    window.location.href = "https://digimilestone.com/";
+}, 6000);
+</script>
+
+</body>
+</html>
