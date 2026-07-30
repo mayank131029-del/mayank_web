@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Functions</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        main {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 15%;
+            
+        }
+
+        .question,
+        .answer {
+            width: 100%;
+            background-color: #eaedff;
+            padding: 30px 20px;
+            /* border-radius: 10px 10px 0 0; */
+            /* border: 2px solid rgba(245, 245, 245, 0.267); */
+        }
+
+        .answer {
+            background-color: #eafffd;
+            /* border-radius: 0 0 10px 10px; */
+
+        }
+
+        .faq-container {
+            width: 100%;
+        }
+
+        .faq-box {
+            padding: 25px 0;
+        }
+    </style>
+</head>
+<header></header>
+
+<body>
+    <div class="back"><a href="/web_development.html"> &larrhk; back</a></div>
+    <main>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-box">
+                <div class="question"><b>1. </b>What services do you provide?</div>
+                <div class="answer"><b>Ans: </b>I offer frontend web development, UI/UX design, graphic design, branding, motion graphics, and video editing tailored to business and personal projects.</div>
+                <div class="question"><b>1. </b>Do you create responsive websites?</div>
+                <div class="answer"><b>Ans: </b>Yes. Every website is designed to work seamlessly across desktops, tablets, and mobile devices with a responsive, user-friendly layout.</div>
+                <div class="question"><b>1. </b>Which technologies do you use?</div>
+                <div class="answer"><b>Ans: </b>I primarily work with HTML, CSS, JavaScript, React, and modern design tools such as Figma, Photoshop, Illustrator, and After Effects.</div>
+                <div class="question"><b>1. </b>Can you redesign an existing website?</div>
+                <div class="answer"><b>Ans: </b>Absolutely. I can modernize your website by improving its visual design, user experience, responsiveness, and overall performance while preserving your brand identity.</div>
+                <div class="question"><b>1. </b>How can I start a project with you?</div>
+                <div class="answer"><b>Ans: </b>You can reach out through the contact form, email, or social media. After discussing your requirements, I'll provide a suitable plan, timeline, and pricing.</div>
+            </div>
+        </div>
+
+    </main>
+</body>
+<footer></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+<script src="/script.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".answer").hide()
+
+        $(".question").each(function (index) {
+            $(this).click(function () {
+                $(".answer").not($(".answer").eq(index)).slideUp();
+                $(".answer").eq(index).slideToggle()
+            })
+        })
+    })
+</script>
+
+</html>

@@ -122,7 +122,8 @@
 
             #js,
             #html,
-            #projects {
+            #projects,
+            #jquery {
                 color: white;
                 cursor: pointer;
                 border-radius: 30px;
@@ -186,6 +187,7 @@
             <ul>
                 <li id="html">HTML + CSS</li>
                 <li id="js">Java Script</li>
+                <li id="jquery">JQuery</li>
             </ul>
         </div>
         <h1 class="heading1">Practice Work</h1>
@@ -262,6 +264,7 @@
 
             let html = document.getElementById("html")
             let js = document.getElementById("js")
+            let jquery = document.getElementById("jquery")
 
 
 
@@ -278,6 +281,9 @@
             if (savedPage === "js_page.html") {
                 js.classList.add("activetab");
             }
+            if (savedPage === "jquery.html") {
+                jquery.classList.add("activetab")
+            }
 
             html.addEventListener("click", () => {
                 heading.innerHTML = "HTML + CSS Practice Work"
@@ -289,8 +295,13 @@
                 frame.src = "js_page.html"
                 localStorage.setItem("activePage", "js_page.html")
             })
+            jquery.addEventListener("click", () => {
+                heading.innerHTML = "JQuery Practice Work"
+                frame.src = "JQuery.html"
+                localStorage.setItem("activePage", "JQuery.html")
+            })
 
-            let menu = [html, js]
+            let menu = [html, js, jquery]
 
             menu.forEach(item => {
                 item.addEventListener("click", () => {
@@ -303,6 +314,10 @@
 
             })
 
+          
+
+
+            // document.title ="fdhfhi"
             console.log(localStorage.getItem("activePage"))
 
         </script>
