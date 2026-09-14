@@ -1,5 +1,4 @@
 const favicon = document.createElement("link");
-
 favicon.rel = "icon";
 favicon.type = "image/png";
 favicon.href = "images/favicon.ico";
@@ -7,9 +6,13 @@ favicon.href = "images/favicon.ico";
 document.head.appendChild(favicon);
 
 
+
+
+
 let header = document.getElementsByTagName("header")[0]
 header.setAttribute("id", "top")
-header.innerHTML = `<nav>
+header.innerHTML = `
+<nav>
       <a href="index.html">
         <div class="logo">
           <h2>Mayank.</h2>
@@ -80,7 +83,7 @@ my_work.forEach(item => {
 
 
 
-console.log(localStorage.getItem("activePage"))
+// console.log(localStorage.getItem("activePage"))
 
 window.addEventListener("load", () => {
 
